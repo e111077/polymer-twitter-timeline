@@ -180,6 +180,17 @@ var twitterTimeline = function () {
       }
     }
   }, {
+    key: '_dataWidgetIdChanged',
+    value: function _dataWidgetIdChanged() {
+      var _this4 = this;
+
+      if (this.dataWidgetId) {
+        this._twttLoaded.then(function () {
+          _this4.loadTimeline(_this4.dataWidgetId);
+        });
+      }
+    }
+  }, {
     key: 'behaviors',
 
     // Define behaviors with a getter.

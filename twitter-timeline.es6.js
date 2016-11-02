@@ -152,6 +152,14 @@ class twitterTimeline {
     }
   }
 
+  _dataWidgetIdChanged () {
+    if (this.dataWidgetId) {
+      this._twttLoaded.then(() => {
+        this.loadTimeline(this.dataWidgetId)
+      })
+    }
+  }
+
 }
 
 // Register the element using Polymer's constructor.
